@@ -1,0 +1,58 @@
+{
+	"$schema": "https://opencode.ai/config.json",
+	"lsp": true,
+
+	// Primary model - uses OpenCode's built-in free model
+	// Can be replaced with your own model after getting started
+	"model": "opencode/big-pickle",
+
+	// Lightweight model for simple tasks (title generation, etc.)
+	"agents": {
+		"title": {
+			"model": "opencode/deepseek-v4.1-flash-free"
+		}
+	},
+
+	// Never use these providers
+	//"disabled_providers": ["openai", "anthropic"],
+
+	"providers": {
+		// Local Ollama Config
+		"ollama": {
+			"package": "aisdk:@ai-sdk/openai-compatible",
+			"name": "Ollama",
+			"settings": {
+				"baseURL": "http://localhost:11434/v1"
+			},
+			"models": {
+				"gemma4:12b-mlx": {
+					"name": "gemma4-12b"
+				}
+			}
+		}
+	},
+
+	// Plugins
+	"plugins": [
+		// context window optimization for AI coding agents
+		// "context-mode",
+		// makes your AI agent think like the laziest senior dev in the room
+		// "@dietrichgebert/ponytail"
+	],
+
+	// MCP servers - defined here or embedded in skills
+	"mcp": {
+		"servers": {
+			// context7: query up-to-date library docs and code examples
+			"context7": {
+				"type": "remote",
+				"url": "https://mcp.context7.com/mcp"
+			},
+			// searchcode: search and analyze public git repositories
+			"searchcode": {
+				"type": "remote",
+				"url": "https://api.searchcode.com/v1/mcp"
+			}
+		}
+	}
+}

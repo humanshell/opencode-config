@@ -1,0 +1,5 @@
+# Private OpenCode service credentials — contains a password; never commit
+service.json
+
+# macOS
+.DS_Store
