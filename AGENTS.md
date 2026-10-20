@@ -3,7 +3,8 @@
 ## What this directory is
 
 This is the **OpenCode user configuration directory** (`~/.config/opencode`), not a software project.
-There is no source code, no git repo, and no build/test/lint commands. Do not look for them or invent them.
+There is no source code and no build/test/lint commands — do not look for them or invent them.
+It is version-controlled: origin is `https://github.com/humanshell/opencode-config.git` (branch `main`).
 
 ## Files
 

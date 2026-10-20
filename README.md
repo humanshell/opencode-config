@@ -2,6 +2,7 @@
 
 Personal [OpenCode](https://opencode.ai) user configuration (`~/.config/opencode`). Not a software
 project — editing these files changes the behavior of the OpenCode CLI/TUI and its agents.
+Version-controlled here and pushed to <https://github.com/humanshell/opencode-config> (branch `main`).
 
 ## Files
 
